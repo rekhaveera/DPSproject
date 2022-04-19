@@ -1,4 +1,3 @@
-from app import app
 import pickle
 from flask import Flask, request, jsonify, send_from_directory,render_template
 import numpy as np
