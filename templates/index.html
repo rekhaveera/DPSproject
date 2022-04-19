@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Churn Prediction1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="E://sem8//dpslab//project//static//css//style.css">
+</head>
+<style>
+
+    .main{
+         background: #5ee7df;
+         background: -webkit-linear-gradient(to right, rgba(94, 231, 223, 0.5), rgba(180, 144, 202, 0.5));
+         background: linear-gradient(to right, rgba(94, 231, 223, 0.5), rgba(180, 144, 202, 0.5));
+         display: grid;
+         justify-content: center;
+         align-items: center;
+         justify-content: space-around;
+}
+    .sub-main{
+        text-align: center;
+        color:#c471f5;
+    }
+    .form-group label, p{
+        color: #c471f5;
+}
+</style>
+
+<body class="main">
+    <h1 class="sub-main">Credit card churn prediction</h1>
+    <br>
+    <br>
+    <form class="form-group" action="{{ url_for('predict')}}"method="post">
+        <div>
+            <input  height="1000" type="number" class="form-control" name="Credit Score" placeholder="Credit Score" required="required" />
+            <br>
+            <input type="number" class="form-control" name="Age" placeholder="Age" required="required" />
+            <br>
+            <input type="number" class="form-control" name="Tenure" placeholder="Tenure" required="required" />
+            <br>
+            <input type="number" class="form-control" name="Balance" placeholder="Balance" required="required" />
+            <br>
+            <input type="number" class="form-control" name="No. of Products" placeholder="No. of Products" required="required" />
+            <br>
+            <input type="number" class="form-control" step="any" name="estimated salary" placeholder="estimated salary" required="required" />
+            <br>
+            <label for="exampleFormControlSelect1">Do you have credit card?</label>
+            <br>
+            <select class="form-control" id="credit" name="credit">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <br>
+            <label for="exampleFormControlSelect1">Are you an active member</label>
+            <select class="form-control" id="active" name="active">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <br>
+            <label for="exampleFormControlSelect1">Gender</label>
+            <select class="form-control" id="gender" name="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+    </div>
+</form>
+
+
+
+</body>
+</html>
