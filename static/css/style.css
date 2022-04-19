@@ -1,0 +1,18 @@
+.main{
+  background: #c471f5;
+  background: -webkit-linear-gradient(to right, rgba(196, 113, 245, 0.5), rgba(250, 113, 205, 0.5));
+  background: linear-gradient(to right, rgba(196, 113, 245, 0.5), rgba(250, 113, 205, 0.5));
+
+    display: flex;
+    flex:0.5;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.submain > h1{
+    text-align: center;
+    color:#6a11cb;
+}
+
